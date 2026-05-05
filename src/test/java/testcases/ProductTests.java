@@ -1,0 +1,37 @@
+package testcases;
+import pojo.Product;
+import routesandendpoints.Routes;
+import utils.ConfigReader;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import payloads.Payload;
+
+import org.testng.ITestContext;
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import java.util.ArrayList;
+public class ProductTests extends BaseClass {
+	@Test
+	public void getAllProducts() {
+	given()
+
+	.when()
+	       .get(Routes.GET_ALL_PRODUCTS)
+	.then()
+	       .statusCode(200)
+	       .body("size()", greaterThan(0));
+	}
+	
+	@Test
+	public void getProductByID() {
+	given()
+	       .pathParam("id", configReader.getIntProperty("productId"))
+	.when()
+	       .get(Routes.GET_PRODUCT_BY_ID)
+	.then()
+	       .statusCode(200);
+	}
+
+}

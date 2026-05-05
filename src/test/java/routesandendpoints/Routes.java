@@ -14,8 +14,7 @@ public static final String CREATE_PRODUCT = "/products";
 public static final String UPDATE_PRODUCT = "/products/{id}";
 public static final String DELETE_PRODUCT = "/products/{id}";
 //Example : then.get(Routes.baseURL+Routes.GET_ALL_PRODUCTS)
-	
-	
-	
+
+
 	
 }
