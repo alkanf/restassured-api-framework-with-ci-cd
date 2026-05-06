@@ -13,7 +13,7 @@ private static final String categories[] = {"electronics","furniture","clothing"
 //Product
 public static Product productPayload() {
 String name = faker.commerce().productName();
-double price = Double.parseDouble(faker.commerce().price());
+double price = Double.parseDouble(faker.commerce().price().replace(",", ""));
 String description = faker.lorem().sentence();
 String imageUrl = "https:i.pravatar.cc/100";
 String category = categories[random.nextInt(categories.length)];
