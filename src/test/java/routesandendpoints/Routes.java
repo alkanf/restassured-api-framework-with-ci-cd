@@ -2,7 +2,7 @@ package routesandendpoints;
 
 public class Routes {
 public static final String baseURL = "https://fakestoreapi.com";
-
+//All the queries will be used as path param in test cases as its easier to convert and use it.
 //Product
 public static final String GET_ALL_PRODUCTS="/products";
 public static final String GET_PRODUCT_BY_ID = "/products/{id}";
@@ -14,6 +14,15 @@ public static final String CREATE_PRODUCT = "/products";
 public static final String UPDATE_PRODUCT = "/products/{id}";
 public static final String DELETE_PRODUCT = "/products/{id}";
 //Example : then.get(Routes.baseURL+Routes.GET_ALL_PRODUCTS)
+
+//Users
+public static final String GET_ALL_USERS = "/users";
+public static final String GET_USER_BY_ID = "/users/{id}";
+public static final String GET_USERS_WITH_LIMIT = "/users?limit={limit}";
+public static final String GET_USERS_SORTED = "/users?sort={order}";
+public static final String CREATE_USER = "/users";
+public static final String UPDATE_USER = "/users/{id}";
+public static final String DELETE_USER = "/users/{id}";
 
 
 	
