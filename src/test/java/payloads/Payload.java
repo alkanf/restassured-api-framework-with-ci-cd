@@ -1,10 +1,15 @@
 package payloads;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 import com.github.javafaker.Faker;
 
 import pojo.Address;
+import pojo.Cart;
+import pojo.CartProduct;
 import pojo.Geolocation;
 import pojo.Name;
 import pojo.Product;
@@ -23,6 +28,9 @@ String description = faker.lorem().sentence();
 String imageUrl = "https:i.pravatar.cc/100";
 String category = categories[random.nextInt(categories.length)];
 return new Product(name, price, description, imageUrl, category);}
+
+
+
 
 //User Payload, as it has nested json we need to create seperate object and store variables
 public static User userPayload() {
@@ -48,5 +56,17 @@ String phoneNumber = faker.phoneNumber().cellPhone();
 User user = new User(email,username,password,name,address,phoneNumber); //all data with pojo data and variables
 return user;
 }
-}
 
+
+
+
+//Cart Payload
+public static Cart cartPayload(int userId) { //as we need userId as external variable 
+List<CartProduct> products = new ArrayList<>();
+//Each cart product contains 
+int productId = random.nextInt(100);
+int quantity = random.nextInt(10);
+products.add(new CartProduct(productId,quantity)); //short version
+return new Cart(userId,new Date(),products); //you can create Date date = new Date(); as it will be anonymous object
+}
+}
