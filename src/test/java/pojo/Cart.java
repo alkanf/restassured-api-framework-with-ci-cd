@@ -24,6 +24,7 @@ private List<CartProduct> products;
 public Cart(int userId, Date date, List<CartProduct> products) {
 this.userId = userId;
 this.date = date;
+this.products = products;
 }
 //Getters and setters methods
 public int getUserId() {
