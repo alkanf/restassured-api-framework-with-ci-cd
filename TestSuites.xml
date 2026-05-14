@@ -13,4 +13,16 @@
             <class name="testcases.UserTests"/>
         </classes>
     </test>
+    
+     <test name="Cart Tests">
+        <classes>
+            <class name="testcases.CartTests"/>
+        </classes>
+    </test>
+    
+    <test name="Auth Tests">
+        <classes>
+            <class name="testcases.LoginTests"/>
+        </classes>
+    </test>
 </suite>

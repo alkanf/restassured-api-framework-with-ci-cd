@@ -11,6 +11,7 @@ import pojo.Address;
 import pojo.Cart;
 import pojo.CartProduct;
 import pojo.Geolocation;
+import pojo.Login;
 import pojo.Name;
 import pojo.Product;
 import pojo.User;
@@ -59,7 +60,6 @@ return user;
 
 
 
-
 //Cart Payload
 public static Cart cartPayload(int userId) { //as we need userId as external variable 
 List<CartProduct> products = new ArrayList<>();
@@ -69,4 +69,20 @@ int quantity = random.nextInt(10);
 products.add(new CartProduct(productId,quantity)); //short version
 return new Cart(userId,new Date(),products); //you can create Date date = new Date(); as it will be anonymous object
 }
+
+
+
+
+
+
+//Login 
+public static Login loginPayload() {
+String username = faker.name().username();
+String password = faker.internet().password();
+Login login = new Login(username,password);
+return login;
+}
+
+
+
 }

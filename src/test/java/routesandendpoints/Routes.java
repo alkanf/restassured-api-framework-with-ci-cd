@@ -35,4 +35,7 @@ public static final String CREATE_CART = "/carts";
 public static final String UPDATE_CART = "/carts/{id}";
 public static final String DELETE_CART = "/carts/{id}";
 	
+//Login (Auth)
+public static final String AUTH_LOGIN = "/auth/login";
+
 }
