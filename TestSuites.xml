@@ -25,4 +25,10 @@
             <class name="testcases.LoginTests"/>
         </classes>
     </test>
+    
+     <test name="Schema Tests">
+        <classes>
+            <class name="testcases.SchemaTests"/>
+        </classes>
+    </test>
 </suite>

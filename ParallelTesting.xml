@@ -9,6 +9,8 @@
             <class name="testcases.UserTests"/>
             <class name="testcases.CartTests"/>
             <class name="testcases.LoginTests"/>
+            <class name="testcases.SchemaTests"/>
+
         </classes>
     </test>
 
