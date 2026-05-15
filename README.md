@@ -47,14 +47,19 @@ testng.xml
 
 ## Reports
 
-* Extent report is generated after execution
 * Allure report:
 
 ```bash id="run03"
 allure serve ./allure-results
 ```
 
----
+## Jenkins CI/CD Setup
+
+* This project is configured to run with Jenkins for CI/CD. The following plugins are required: 
+* Maven Integration, Git & GitHub Plugin, Allure Jenkins Plugin, and HTML Publisher Plugin.
+
+Additionally, the Jenkins global tools must include Maven, JDK, and Git.
+
 
 ## Additional Notes
 
